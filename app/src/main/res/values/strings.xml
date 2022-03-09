@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Bluetooth BotLAB.co</string>
+    <string name="strconten">IMAGEN</string>
+    <string name="strdesco">DESCONECTAR</string>
+    <string name="strescriba">Escriba un texto</string>
+    <string name="strtexto">SENSOR</string>
+</resources>

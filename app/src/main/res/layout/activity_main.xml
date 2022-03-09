@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_logo_cun" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/design_default_color_primary"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:layout_marginLeft="16dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/addressInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:counterEnabled="true"
+            app:counterMaxLength="30"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/ic_baseline_text_fields_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtTextoOut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/strescriba"
+                android:maxLength="31" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageButton
+            android:id="@+id/btnEnviar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/ic_enter"
+            android:contentDescription="@string/strconten" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/design_default_color_primary"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/btnIzquierda"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:contentDescription="@string/strconten"
+                app:srcCompat="@drawable/ic_baseline_keyboard_double_arrow_left_24" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/btnAdelante"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:contentDescription="@string/strconten"
+                app:srcCompat="@drawable/ic_baseline_keyboard_double_arrow_up_24" />
+
+            <ImageButton
+                android:id="@+id/btnStop"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:contentDescription="@string/strconten"
+                app:srcCompat="@drawable/ic_baseline_stop_24" />
+
+            <ImageButton
+                android:id="@+id/btnReversa"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:contentDescription="@string/strconten"
+                app:srcCompat="@drawable/ic_baseline_keyboard_double_arrow_down_24" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/btnDerecha"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:contentDescription="@string/strconten"
+                app:srcCompat="@drawable/ic_baseline_keyboard_double_arrow_right_24" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/design_default_color_primary"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginVertical="16dp">
+
+        <TextView
+            android:id="@+id/tvtMensaje"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:hint="@string/strtexto"
+            android:textSize="48dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnDesconectar" />
+
+        <View
+            android:id="@+id/valueBar"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/design_default_color_primary"></View>
+
+        <Button
+            android:id="@+id/btnDesconectar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strdesco"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+
+</LinearLayout>
