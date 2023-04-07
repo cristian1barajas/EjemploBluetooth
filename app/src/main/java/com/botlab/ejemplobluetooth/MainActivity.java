@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
     private static String address = null;
     //-------------------------------------------
 
+    @SuppressLint({"ClickableViewAccessibility", "HandlerLeak"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -119,38 +121,75 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnAdelante.setOnClickListener(new View.OnClickListener() {
+        btnAdelante.setOnTouchListener(new View.OnTouchListener() {
+            @SuppressLint("ClickableViewAccessibility")
             @Override
-            public void onClick(View view) {
-                MyConexionBT.write("U");
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        MyConexionBT.write("U");
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        MyConexionBT.write("S");
+                        break;
+                }
+                return false;
             }
         });
 
-        btnIzquierda.setOnClickListener(new View.OnClickListener() {
+        btnIzquierda.setOnTouchListener(new View.OnTouchListener() {
+            @SuppressLint("ClickableViewAccessibility")
             @Override
-            public void onClick(View view) {
-                MyConexionBT.write("L");
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        MyConexionBT.write("L");
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        MyConexionBT.write("S");
+                        break;
+                }
+                return false;
             }
         });
+
 
         btnStop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MyConexionBT.write("S");
+                MyConexionBT.write("X");
             }
         });
 
-        btnDerecha.setOnClickListener(new View.OnClickListener() {
+        btnDerecha.setOnTouchListener(new View.OnTouchListener() {
+            @SuppressLint("ClickableViewAccessibility")
             @Override
-            public void onClick(View view) {
-                MyConexionBT.write("R");
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        MyConexionBT.write("R");
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        MyConexionBT.write("S");
+                        break;
+                }
+                return false;
             }
         });
 
-        btnReversa.setOnClickListener(new View.OnClickListener() {
+        btnReversa.setOnTouchListener(new View.OnTouchListener() {
+            @SuppressLint("ClickableViewAccessibility")
             @Override
-            public void onClick(View view) {
-                MyConexionBT.write("D");
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        MyConexionBT.write("D");
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        MyConexionBT.write("S");
+                        break;
+                }
+                return false;
             }
         });
 

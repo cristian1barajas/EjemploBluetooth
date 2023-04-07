@@ -11,4 +11,8 @@
     <color name="blue_light">#F3F8FD</color>
     <color name="violet">#5B5B80</color>
     <color name="text_dark">#CCCCCC</color>
+    <color name="button_bg">#CDCDCD</color>
+    <color name="button_bg_dark">#2E2E2E</color>
+    <color name="button_dark">#9C27B0</color>
+    <color name="button_light">#00BCD4</color>
 </resources>

@@ -79,9 +79,14 @@
 
             <ImageButton
                 android:id="@+id/btnIzquierda"
-                android:layout_width="56dp"
-                android:layout_height="56dp"
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:layout_margin="14dp"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="@color/button_bg"
                 android:contentDescription="@string/strconten"
+                android:elevation="2dp"
+                android:theme="@style/ButtonStyle"
                 app:srcCompat="@drawable/ic_baseline_keyboard_double_arrow_left_24" />
         </LinearLayout>
 
@@ -92,23 +97,37 @@
 
             <ImageButton
                 android:id="@+id/btnAdelante"
-                android:layout_width="56dp"
-                android:layout_height="56dp"
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:layout_margin="14dp"
+                android:background="@drawable/rounded_button"
                 android:contentDescription="@string/strconten"
+                android:elevation="2dp"
+                android:theme="@style/ButtonStyle"
                 app:srcCompat="@drawable/ic_baseline_keyboard_double_arrow_up_24" />
 
             <ImageButton
                 android:id="@+id/btnStop"
-                android:layout_width="56dp"
-                android:layout_height="56dp"
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:layout_margin="14dp"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="@color/button_bg"
                 android:contentDescription="@string/strconten"
+                android:elevation="2dp"
+                android:theme="@style/ButtonStyle"
                 app:srcCompat="@drawable/ic_baseline_stop_24" />
 
             <ImageButton
                 android:id="@+id/btnReversa"
-                android:layout_width="56dp"
-                android:layout_height="56dp"
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:layout_margin="14dp"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="@color/button_bg"
                 android:contentDescription="@string/strconten"
+                android:elevation="2dp"
+                android:theme="@style/ButtonStyle"
                 app:srcCompat="@drawable/ic_baseline_keyboard_double_arrow_down_24" />
         </LinearLayout>
 
@@ -119,9 +138,13 @@
 
             <ImageButton
                 android:id="@+id/btnDerecha"
-                android:layout_width="56dp"
-                android:layout_height="56dp"
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:layout_margin="14dp"
+                android:background="@drawable/rounded_button"
                 android:contentDescription="@string/strconten"
+                android:elevation="2dp"
+                android:theme="@style/ButtonStyle"
                 app:srcCompat="@drawable/ic_baseline_keyboard_double_arrow_right_24" />
         </LinearLayout>
     </LinearLayout>
@@ -146,7 +169,7 @@
             android:fontFamily="sans-serif-light"
             android:gravity="center"
             android:hint="@string/strtexto"
-            android:textSize="48dp"
+            android:textSize="24dp"
             app:layout_constraintBottom_toTopOf="@+id/btnDesconectar" />
 
         <View
