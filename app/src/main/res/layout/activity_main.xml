@@ -159,18 +159,16 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
-        android:layout_marginVertical="16dp">
+        >
 
-        <TextView
-            android:id="@+id/tvtMensaje"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:fontFamily="sans-serif-light"
-            android:gravity="center"
-            android:hint="@string/strtexto"
-            android:textSize="24dp"
-            app:layout_constraintBottom_toTopOf="@+id/btnDesconectar" />
+        <SeekBar
+            android:id="@+id/slider1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:progress="80"
+            android:max="100"
+            android:layout_marginVertical="16dp"/>
+
 
         <View
             android:id="@+id/valueBar"

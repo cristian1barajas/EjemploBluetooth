@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     ImageButton btnEnviar, btnAdelante, btnIzquierda, btnStop, btnDerecha, btnReversa;
     TextView tvtMensaje;
     Button btnDesconectar;
-    Slider mySlider;
+    SeekBar seekBar;
     int count = 0;
 
     //-------------------------------------------
@@ -109,14 +110,27 @@ public class MainActivity extends AppCompatActivity {
         btnStop = findViewById(R.id.btnStop);
         btnDerecha = findViewById(R.id.btnDerecha);
         btnReversa = findViewById(R.id.btnReversa);
-        tvtMensaje = findViewById(R.id.tvtMensaje);
         btnDesconectar = findViewById(R.id.btnDesconectar);
+        seekBar = findViewById(R.id.slider1);
+
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                String GetDat = Integer.toString(progress);
+                MyConexionBT.write(GetDat);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {}
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {}
+        });
 
         btnEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String GetDat = edtTextoOut.getText().toString();
-                //tvtMensaje.setText(GetDat);
                 MyConexionBT.write(GetDat);
             }
         });
